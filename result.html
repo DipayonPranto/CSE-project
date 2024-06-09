@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Result</h1>
+        <p id=res></p>
+
+        <script>
+            var data=window.location.search;
+            var params=new URLSearchParams(data);
+
+            var name=params.get("name");
+            var age=params.get("age");
+            var email=params.get("email");
+            var mobile=params.get("mobile");
+            var city=params.get("city");
+            var gender=params.get("gender");
+            var nationality=params.get("nationality");
+
+            var getdata="Name:"+name+"<br>";
+                getdata+="Age:"+age+"<br>";
+                getdata+="Email:"+email+"<br>";
+                getdata+="Mobile:"+mobile+"<br>";
+                getdata+="City:"+city+"<br>";
+                getdata+="Gender:"+gender+"<br>";
+                getdata+="Nationality:"+nationality;
+
+                document.getElementById("res").innerHTML=getdata;
+        </script>
+    </body>
+</html>
